@@ -1,7 +1,7 @@
 ﻿using Delegram.Api.Models.DTOs;
 using Delegram.Api.Repositories.Security;
 using Delegram.Api.Security;
-using Delegram.Api.Services;
+using Delegram.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
