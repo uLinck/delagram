@@ -4,7 +4,7 @@ import Login from "./components/Login"
 
 const AppRoutes = [
   {
-    index: true,
+    path: "/home",
     element: <Home />
   },
   {
@@ -12,7 +12,7 @@ const AppRoutes = [
     element: <HomeTest />
   },
   {
-    path: "/login",
+    index: true,
     element: <Login />
   }
 ];

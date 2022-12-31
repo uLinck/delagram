@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { LoginUser } from '../HttpClient'
 
-const Login = () => {
+const Login = (props) => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(props.loggedUser)
 
   const handleSubmit = async e => {
     e.preventDefault()

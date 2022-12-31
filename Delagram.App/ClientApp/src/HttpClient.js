@@ -3,7 +3,7 @@ const Fetch = async (endpoint, method, object) => {
     method: `${method}`,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjcyNTE3NDM5LCJleHAiOjE2NzI1MjEwMzksImlhdCI6MTY3MjUxNzQzOX0.VH5grfO7bQV3gfn0mi4bsYAYRfMzwOjw4iH57OeDS1U'
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjcyNTIzMDMzLCJleHAiOjE2NzI1MjY2MzMsImlhdCI6MTY3MjUyMzAzM30.RllKCZoGzJY8JRDpF8T41AKXlQwzDz5Qw8Jie_i1pbE'
     },
     body: JSON.stringify(object),
     credentials: 'omit'

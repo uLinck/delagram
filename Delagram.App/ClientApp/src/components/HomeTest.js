@@ -1,8 +1,8 @@
 import {useEffect, useState, useMemo } from "react"
 import Cookies from "universal-cookie"
 
-const HomeTest = () => {
-  const [user, setUser] = useState()
+const HomeTest = (props) => {
+  const [user, setUser] = useState(props.loggedUser)
 
   const cookies = new Cookies()
   const [count, setCount] = useState(getCount(cookies));
