@@ -9,17 +9,22 @@ namespace Delegram.Api.Repositories.Security
         { 
             new()
             {
-                Id = 1, Username = "batman", Password = "batman", Role = new HashSet<Role> { Role.Pinto }
+                Id = 1, Username = "batman", Password = "batman", Role = Role.Pinto
             },
             new()
             {
-                Id = 2, Username = "robin", Password = "robin", Role = new HashSet<Role> { Role.Admin }
+                Id = 2, Username = "robin", Password = "robin", Role =  Role.Admin 
             }
         };
 
         public static User Get(string username, string password)
         {
-            return Users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == x.Password).FirstOrDefault();
+            return Users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == password).FirstOrDefault();
+        }
+
+        public static List<User> GetAll()
+        {
+            return Users;
         }
     }
 }

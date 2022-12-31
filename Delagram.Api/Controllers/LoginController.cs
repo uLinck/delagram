@@ -1,4 +1,5 @@
-﻿using Delegram.Api.Models.DTOs;
+﻿using Delegram.Api.Models;
+using Delegram.Api.Models.DTOs;
 using Delegram.Api.Repositories.Security;
 using Delegram.Api.Security;
 using Delegram.Api.Services.Interfaces;
@@ -29,7 +30,15 @@ namespace Delegram.Api.Controllers
             if (token is null)
                 return NotFound();
 
-            return token;
+            return Ok(token);
+        }
+
+        [HttpPost]
+        [Route("Login")]
+        [Authorize()]
+        public ActionResult<List<User>> Login([FromBody] LoginDTO model)
+        {
+            return Ok(UserRepository.Get(model.Username, model.Password));
         }
     }
 }
